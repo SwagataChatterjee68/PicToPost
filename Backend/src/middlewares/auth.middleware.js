@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.model");
 
 const authMiddleware = async (req, res, next) => {
-  const { token } = req.cookies.token;
+  const token = req.cookies.token;
 
   if (!token) {
     return res.status(401).json({
@@ -17,7 +17,7 @@ const authMiddleware = async (req, res, next) => {
     req.user = user;
     next();
   } catch (error) {
-    res.status(200).json({
+    return res.status(200).json({
       message: "Login Again",
     });
   }
