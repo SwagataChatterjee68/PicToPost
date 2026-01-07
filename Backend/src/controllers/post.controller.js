@@ -16,7 +16,7 @@ const createPostController = async (req, res) => {
 
   res.json({
     message:"Post Created Successfully",
-    post
+    caption
   })
 };
 module.exports = {
