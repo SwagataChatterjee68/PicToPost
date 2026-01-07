@@ -1,89 +1,43 @@
-# PicToPost 📸➡️📝  
-**Image directly becomes a post**
+# PicToPost Project
 
-PicToPost is a full-stack web application where logged-in users upload an image, AI generates a caption based on that image, and the complete post (image + caption) is saved in a MongoDB database.
+## Overview
 
-This project focuses on real-world backend workflows like authentication, cloud image storage, AI integration, and database-driven post creation.
+PicToPost is a web application that generates engaging social media captions from images using the Gemini AI model. Users can register, log in securely, upload photos and instantly receive creative captions with relevant hashtags.
 
----
-
-## 🚀 Features
-
-- User authentication (Register & Login)
-- Secure image upload to cloud storage
-- AI-generated captions from images
-- Post creation for authenticated users
-- MongoDB-based post storage
-- Clean REST API architecture
+The project demonstrates a full stack development workflow with React as the frontend and Node.js with MongoDB as the backend.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
+
+- User authentication with JWT cookies  
+- Account registration with username, email and password  
+- Protected image upload route  
+- AI powered caption generation  
+- Real time image preview on frontend  
+- Dark themed modern user interface  
+- Responsive design for mobile and desktop  
+- Secure password storage using bcrypt  
+- CORS enabled cross origin communication  
+
+---
+
+## Tech Stack
 
 ### Frontend
-- HTML
-- CSS / Tailwind CSS
-- JavaScript
+
+- React.js  
+- React Router DOM  
+- Normal CSS for styling  
+- Vite as build tool  
 
 ### Backend
-- Node.js
-- Express.js
 
-### Database
-- MongoDB (Mongoose)
-
-### Cloud & AI
-- Cloudinary (image upload)
-- AI API (image-to-caption generation)
+- Node.js  
+- Express.js  
+- MongoDB  
+- JWT for authentication  
+- Multer for image handling  
+- Google Gemini 2.5 Flash for AI processing  
 
 ---
-
-## 🔐 Authentication Flow
-
-1. User registers or logs in
-2. JWT token is generated
-3. Protected routes are accessible only to authenticated users
-4. User can create posts after login
-
----
-
-## 🖼️ Post Creation Flow
-
-1. User uploads an image
-2. Image is stored in cloud storage
-3. AI analyzes the image
-4. Caption is generated automatically
-5. Image URL and caption are saved as a post in MongoDB
-
----
-
-## ▶️ Run Locally
-
-### Clone the repository
-```bash
-git clone https://github.com/your-username/PicToPost.git
-cd PicToPost
-Install backend dependencies
-bash
-Copy code
-cd backend
-npm install
-Start the backend server
-bash
-Copy code
-npm start
-Run frontend
-Open frontend/index.html in your browser or use Live Server.
-
-📌 Future Enhancements
-Caption regeneration option
-
-Post feed with pagination
-
-Like and comment system
-
-User profiles
-
-Deployment (Render / Vercel / AWS)
-
-Image moderation
